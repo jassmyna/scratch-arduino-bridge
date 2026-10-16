@@ -1,4 +1,3 @@
-```cpp
 // SCRATCH <-> ARDUINO MEGA
 // UNIVERSAL WORKSHOP BRIDGE
 // FARA JOYSTICK
@@ -107,4 +106,3 @@ void loop() {
 
   delay(20);
 }
-```
