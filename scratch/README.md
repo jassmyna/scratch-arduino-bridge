@@ -1,24 +1,36 @@
 # Scratch Game
 
+## Overview
+
 This directory documents the Scratch game developed for an interactive STEM workshop using the Scratch-Arduino Bridge.
 
-## Game Concept
-
-Participants were challenged to connect a cable to a specified Arduino pin as quickly as possible. The activity introduced physical computing through a hands-on game.
-
-The Scratch code was iteratively improved throughout the workshop, while the Python bridge and Arduino firmware remained unchanged.
+The initial activity challenged children to connect a cable to a specified Arduino pin as quickly as possible. The game was progressively improved by modifying the Scratch code throughout the workshop, without changing the Python bridge or Arduino firmware.
 
 ## Integration
 
-The Scratch project communicates with the Arduino through Scratch cloud variables and the Python bridge.
+The Scratch game communicates with the Arduino Mega through Scratch cloud variables and the Python bridge.
 
-- `ARDUINO`: sends commands from Scratch to the Arduino.
-- `SENSOR` and `INPUT1`–`INPUT4`: receive input states from the Arduino.
+| Cloud variable | Purpose |
+|---|---|
+| `ARDUINO` | Sends commands to control the Arduino's built-in LED |
+| `SENSOR` | Receives input updates from pin D7 |
+| `INPUT1` | Mirrors the state of pin D7 |
+| `INPUT2` | Receives input updates from pin D8 |
+| `INPUT3` | Receives input updates from pin D9 |
+| `INPUT4` | Receives input updates from pin D10 |
 
-## Project Files
+## Running the Game
 
-The original Scratch project file (`.sb3`) can be added to this directory when available.
+1. Configure the Scratch username and project ID in `bridge/bridge.py`.
+2. Upload the Arduino firmware.
+3. Start the Python bridge using the instructions in the main README.
+4. Open the Scratch project and interact with the game.
 
-## Setup
+## Project File
 
-See the main repository README for installation and connection instructions.
+The original Scratch project can be included in this directory as an `.sb3` file when available.
+
+## Related Documentation
+
+- Main repository README: installation and quick start
+- `docs/README.md`: system architecture, pin mapping, and troubleshooting
